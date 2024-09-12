@@ -4,42 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a92ee3e0-d7bd-478c-b911-cff08edd60bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CW3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/dao/api_posts_dao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/comments/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/comments/dao/commets_dao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/logger/logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/posts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/posts/dao/posts_dao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/posts/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/users/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/users/dao/users_dao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/users/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/bookmarks.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/comments.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/posts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/api.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bookmarks.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tag.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user-feed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/api_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+    <list default="true" id="a92ee3e0-d7bd-478c-b911-cff08edd60bd" name="Changes" comment="got stuck with the ileNotFoundError /users/&lt;user_name&gt;">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +199,19 @@
       <option name="presentableId" value="Default" />
       <updated>1723238536376</updated>
     </task>
+    <task id="LOCAL-00001" summary="got stuck with the ileNotFoundError /users/&lt;user_name&gt;">
+      <option name="closed" value="true" />
+      <created>1726184824932</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726184824932</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="got stuck with the ileNotFoundError /users/&lt;user_name&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="got stuck with the ileNotFoundError /users/&lt;user_name&gt;" />
   </component>
 </project>
