@@ -14,6 +14,25 @@ def load_essence(path):
         return essence_data
 
 
+def save_essence(path, data):
+    with open(path, "w", encoding="utf-8") as file:
+        json.dump(data, file, ensure_ascii=False)
+
+
+def remove_essence(path, essence_id):
+    """
+    Delete essence by pk
+    :param path: path to file with list of essence
+    :param essence_id: personal key for the essence
+    :return: updated list of essences
+    """
+    essences = load_essence(path)
+    for index, essence in enumerate(essences):
+        if int(essence["pk"]) == int(essence_id):
+            del essences[index]
+            break
+    save_essence(path, essences)
+
 #
 # print(os.listdir())
 # user_posts = load_essence("posts.json")
@@ -27,34 +46,41 @@ def load_essence(path):
 # print(load_essence("/data/comments.json"))
 
 
-def get_users_from_posts(path_posts):
-    user_data_posts = load_essence(path_posts)
-    if not user_data_posts:
-        raise ValueError(f"it have to be list")
-    user_list = []
-    for user in user_data_posts:
-        user_list.append(user["poster_name"])
-    return user_list
-
-
-# with open("posts.json", "r", encoding="utf-8") as file:
-#     essence_data = json.load(file)
-#     print(essence_data)
-
-
-def get_users_from_comments(path_comments):
-    user_comments = load_essence(path_comments)
-    if not user_comments:
-        raise ValueError(f"it have to be list")
-    user_list = []
-    for user in user_comments:
-        user_list.append(user["commenter_name"])
-    return user_list
-
-
 def get_all_users(path_posts, path_comments):
-    users = get_users_from_posts(path_posts).extend(get_users_from_comments(path_comments))
-    return users
+    user_data_posts = load_essence(path_posts)
+
+    users_list = []
+    for user in user_data_posts:
+        if user not in users_list:
+            users_list.append(user["poster_name"])
+        else:
+            continue
+
+    user_comments = load_essence(path_comments)
+
+    for user in user_comments:
+        if user not in users_list:
+            users_list.append(user["commenter_name"])
+        else:
+            continue
+
+    return users_list
+
+
+def convert_post(post):
+    content = post["content"]
+    content_list = content.split(" ")
+    updated_content = []
+    for word in content_list:
+        if word[0] == "#":
+            print(word)
+            new_word = f"<a href='/tag/{word[1:]}'>{word}</a>"
+            print(new_word)
+            word = new_word
+        updated_content.append(word)
+    post["content"] = " ".join(updated_content)
+    return post
+
 
 #
 #

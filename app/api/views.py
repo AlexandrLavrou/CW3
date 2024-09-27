@@ -7,12 +7,14 @@ from app.posts.dao.posts_dao import get_all_posts
 api_blueprint = Blueprint("api_blueprint", __name__)
 
 logger = logging.getLogger("basic")
+logger_api = logging.getLogger("api")
 
 
 @api_blueprint.route("/api/posts", methods=["GET"])
 def api_index_page():
     try:
         posts_data = get_all_api_posts()
+        logger_api.info(f"Request /api/posts")
         logger.debug("attempt to load json file with posts")
     except FileNotFoundError as error:
 
@@ -27,7 +29,7 @@ def api_post_page(post_id):
     try:
         post = get_api_post_by_pk(post_id)
         logger.debug(f"attempt to load json post by post id: {post_id}")
-
+        logger_api.info(f"Request /api/posts/<{post_id}>")
     except ValueError as error:
         logger.debug(f"pk must by in range(1, {len(posts_data)})")
         return render_template("error.html", error=error)

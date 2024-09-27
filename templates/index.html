@@ -16,9 +16,9 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#skygram"></use>
         </svg>
       </a>
-      <a href="/bookmarks.html" class="header__bookmark-btn">
-        <img src="static/img/bookmark.png" alt="" class="header__bookmark-icon" width="28">
-        <span class="header__bookmark-counter">3</span>
+      <a href="/bookmarks" class="header__bookmark-btn">
+        <img src="/static/img/bookmark.png" alt="" class="header__bookmark-icon" width="28">
+        <span class="header__bookmark-counter">{{ len_bookmarks }}</span>
       </a>
     </div>
   </header>
@@ -43,7 +43,7 @@
             <span class="item__username">{{post.poster_name}} </span>
           </a>
         </div>
-        <a href="/posts/{{ posts.pk }}" class="item__post-link">
+        <a href="/posts/{{ post.pk }}" class="item__post-link">
           <img src="{{post.pic}}" alt="" width="348" class="item__post-img">
         </a>
         <p class="item__descr">{{post.content[0:50]}}...</p>
@@ -55,8 +55,8 @@
         </div>
         <div class="item__post-bottom">
           <a href="/posts/{{post.pk}}" class="item__btn-more">Подробнее</a>
-          <button type="button" class="item__bookmark-btn">
-            <img src="/static/img/bookmark.png" alt="" class="item__bookmark-icon" width="24">
+          <button type="button" class="item__bookmark-btn" onclick="window.location='/bookmarks/add/{{post.pk}}'">
+            <img src="./static/img/bookmark.png" alt="" class="item__bookmark-icon" width="24">
           </button>
         </div>
       </div>

@@ -22,9 +22,3 @@ def user_posts_page(user_name):
     return render_template("user-feed.html", user_posts=user_posts)
 
 
-@users_blueprint.errorhandler(404)
-def error_page(error):
-    # if status_code ==
-    return render_template("error.html", error=error), 404
-#
-#
